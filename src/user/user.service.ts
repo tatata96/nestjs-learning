@@ -59,8 +59,7 @@ export class UserService {
 
     const newUser = {
       id: newId,
-      name: dto.name,
-      email: dto.email,
+      ...dto,
     };
 
     this.users.push(newUser);
