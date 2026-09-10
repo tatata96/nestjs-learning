@@ -1,0 +1,5 @@
+nest g module user
+nest g controller user
+nest g service user
+nest g interceptor utils/transform --flat
+npm i class-validator class-transformer

@@ -4,21 +4,15 @@ import {
   Delete,
   Get,
   Param,
+  ParseIntPipe,
   Post,
   Put,
   Query,
 } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
-import { UserService } from './user.service';
+import { CreateUserDto } from './dto/create-user.dto.js';
+import { UpdateUserDto } from './dto/update-user.dto.js';
+import { UserService } from './user.service.js';
 
-// @Get('all')       // GET /user/all
-// @Get(':id')       // GET /user/:id - dynamic segment
-// @Post()           // POST /user
-// @Put(':id')       // PUT /user/:id
-// @Delete(':id')    // DELETE /user/:id
-
-// user is the rouute prefix
 @Controller('user')
 export class UserController {
   // constructor injection which gets access to the user service, it assignes the injected service
@@ -31,9 +25,8 @@ export class UserController {
   }
 
   @Get(':id')
-  getUser(@Param('id') id: string) {
-    // http://localhost:3000/user/1
-    return this.userService.findOneUser(Number(id));
+  getUserById(@Param('id', ParseIntPipe) id: number) {
+    return this.userService.findOneUser(id);
   }
 
   @Post()

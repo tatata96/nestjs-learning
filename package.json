@@ -2,9 +2,10 @@
   "name": "nestjs-learning",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "tamara",
   "private": true,
   "license": "UNLICENSED",
+  "type": "module",
   "scripts": {
     "build": "nest build",
     "deploy": "nest deploy",
@@ -25,6 +26,8 @@
     "@nestjs/core": "^12.0.1",
     "@nestjs/mapped-types": "^12.0.0",
     "@nestjs/platform-express": "^12.0.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1"
   },
@@ -41,7 +44,7 @@
     "prettier": "^3.4.2",
     "source-map-support": "^0.5.21",
     "supertest": "^7.0.0",
-    "typescript": "^5.9.3",
+    "typescript": "^7.0.2",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^4.1.2"
   }

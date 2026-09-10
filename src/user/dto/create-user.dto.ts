@@ -5,7 +5,13 @@
 //CreateUserDto = what the client is allowed to send
 //User = what your app stores/returns
 
+import { IsEmail, IsString, MinLength } from 'class-validator';
+
 export class CreateUserDto {
+  @IsString()
+  @MinLength(3)
   name: string;
+
+  @IsEmail()
   email: string;
 }
