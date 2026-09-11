@@ -4,3 +4,4 @@ nest g service user
 nest g interceptor utils/transform --flat
 npm i class-validator class-transformer
 nest g middleware api-key --flat
+nest g guard guards/role --flat
